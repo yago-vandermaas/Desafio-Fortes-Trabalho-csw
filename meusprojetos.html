@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meus projetos</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: url('imagens/fundo.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #11468C;
+        }
+
+        .logo {
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            width: 160px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 50px;
+            right: 70px;
+            padding: 20px 30px;
+            background-color: #11468C;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 100px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-input {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            font-size: 16px;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            width: 500px;
+            margin: 50px;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.226);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="imagens/logofortes.png" alt="Logo" class="logo">
+    <button class="back-button" onclick="window.location.href=' '">Voltar</button>
+    <h1 class="title">Meus Projetos</h1>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Pesquise por projetos...">
+    </div>
+    <div class="projects-container">
+        <div class="project-card" onclick="window.location.href='projeto 1.html'">Projeto 1 <h3> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3></div>
+        <div class="project-card">Projeto 2 <h3> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3></div>
+        <div class="project-card">Projeto 3 <h3> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3></div>
+        <div class="project-card">Projeto 4 <h3> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3></div>
+        <div class="project-card">Projeto 5 <h3> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3></div>
+        <div class="project-card">Projeto 6 <h3> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3></div>
+    </div>
+</body>
+</html>
+<a href="ProjetosGerais.html"><button class="back-button">Voltar</button></a>

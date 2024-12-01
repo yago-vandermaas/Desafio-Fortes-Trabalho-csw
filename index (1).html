@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela de Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        height: 100%; 
+        font-family: Arial, sans-serif; 
+    }
+    
+    body {
+        background: url(imagens/fundo.png) no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo {
+        position: absolute;
+        top: 100px; 
+        width: 500px; 
+    }
+    
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .button {
+        width: 350px;
+        padding: 10px 20px;
+        font-size: 16px; 
+        font-weight: bold;
+        color: #fff;
+        background-color: #11468C;
+        border: none; 
+        border-radius: 15px; 
+        cursor: pointer; 
+        margin-bottom: 10px; 
+    }
+    
+    .button:hover {
+        background-color: #0056b3; 
+    }
+</style>
+</head>
+<body>
+    <img src="imagens/logofortes.png" alt="Logo Fortes" class="logo">
+    <div class="login-container">
+        <button onclick="window.location.href='logincolaboradorfortes.html'" class="button">Colaborador FORTES</button>
+        <button onclick="window.location.href='logindonatario.html'" class="button">Donatário</button>
+    </div>
+</body>
+</html>
+

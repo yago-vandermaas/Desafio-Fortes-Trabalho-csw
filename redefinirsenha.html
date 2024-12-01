@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recuperação de senha</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; 
+    font-family: Arial, sans-serif; 
+}
+
+body {
+    background: url('imagens/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    top: 100px;
+    width: 500px;
+}
+
+.recovery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.icon-circle {
+    font-size: 50px;
+    color: #11468C;
+    margin-bottom: 20px;
+}
+
+.recovery-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.recovery-message {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px; 
+    max-width: 300px;
+}
+
+.back-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #11468C;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: uppercase; 
+}
+
+.back-button:hover {
+    background-color: #0056b3; 
+}
+
+    </style>
+</head>
+<body>
+    <img src="imagens/logofortes.png" alt="Logo" class="logo">
+    <div class="recovery-container">
+        <div class="icon-circle"> &#8635;
+        </div>
+        <h1 class="recovery-title">Recuperação de senha</h1>
+        <p class="recovery-message"> Enviamos um link para o seu E-mail para que sua senha seja redefinida</p>
+        <a href="index (1).html"><button class="back-button">Voltar</button></a>
+    </div>
+</body>
+</html>

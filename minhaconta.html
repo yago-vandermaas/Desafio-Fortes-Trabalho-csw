@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>minha conta</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+  }
+
+  .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+ 
+  .sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    top: 50%; 
+    left: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    transform: translateY(-50%);
+  }
+
+  .sidebar .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 150px; 
+  }
+  
+  .sidebar .logo img {
+    width: 150px; 
+  }
+
+  .sidebar .menu {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+  }
+  
+  .sidebar .menu li {
+    margin-bottom: 15px;
+    text-align: center; 
+  }
+  
+  .sidebar .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block; 
+  }
+  
+  .sidebar .menu li a.active {
+    color: #00ff90;
+  }
+  
+  
+  .sidebar .logo img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .menu {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sidebar .menu li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .sidebar .menu li a.active {
+    color: #00ff90;
+  }
+
+  .content {
+    flex: 1;
+    background-image: url('imagens/fundo.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    height: 100%;
+  }
+
+  .profile-info {
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+  }
+
+  .greeting {
+    padding: 15px;
+    border-radius: 8px;
+    color: #11468C;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .profile-photo {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .profile-photo .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid #00ff90;
+  }
+  
+  .profile-photo .change-photo {
+    color: #00ff90;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .user-details {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    color: white;
+  }
+  
+  .user-details p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="imagens/logofortes.png" alt="Fortes Engenharia">
+      </div>
+      <ul class="menu">
+        <div class="menu">
+        <li><a href="./HomePage.html">Página inicial</a></li>
+        <li><a href="./minhaconta.html" class="active">Minha conta</a></li>
+        <li><a href="./Editais.html">Editais</a></li>
+        <li><a href="./donatarios.html">Donatários</a></li>
+        <li><a href="./EquipesFortificar.html">Equipes fortificar</a></li>
+        <li><a href="./ProjetosGerais.html">Projetos</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+        <li><a href="./index (1).html">Sair</a></li>
+        </div>
+      </ul>
+    </div>
+    <main class="content">
+      <div class="profile-info">
+        <div class="greeting">
+          <h1>Olá! Bem-vindo à sua conta!</h1>
+        </div>
+        <div class="profile-photo">
+          <img src="imagens/iconconta.png" alt="Foto de Perfil" class="profile-pic">
+          <br>
+          <a href="#" class="change-photo">Alterar foto de perfil</a>
+        </div>
+        <div class="user-details">
+          <p><strong>Nome do usuário:</strong> [Seu Nome]</p>
+          <p><strong>E-mail cadastrado:</strong> [Seu E-mail]</p>
+          <p><strong>Telefone:</strong> [Seu Telefone]</p>
+          <p><strong>Papel na plataforma:</strong> Colaborador ou Donatário</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

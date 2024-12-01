@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto 1</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: url('imagens/fundo.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #11468C;
+        }
+
+        .logo {
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            width: 160px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 50px;
+            right: 70px;
+            padding: 20px 30px;
+            background-color: #11468C;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 100px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .options-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .option {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 15px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .option:hover {
+            background-color: #ccc;
+        }
+
+        .option.active {
+            background-color: #11468C;
+            color: white;
+        }
+
+        .updates-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .update-card {
+            width: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.226);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagens/logofortes.png" alt="Logo" class="logo">
+    <button class="back-button" onclick="window.location.href='meusprojetos.html'">Voltar</button>
+    <h1 class="title">Projeto 1</h1>
+    <div class="options-container">
+        <div class="option active" id="updatesOption">Atualizações</div>
+        <div class="option" id="finalReportOption">Relatório Final</div>
+        <div class="option" id="workPlanOption">Plano de Trabalho (PDF)</div>
+    </div>
+    <div class="updates-container" id="updatesContainer">
+        <div class="update-card"><h1>Atualização do andamento do projeto</h1>
+            <h3>20/11/2024 - Local</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nulla earum velit eius aliquid quam odit numquam laborum commodi saepe porro vero quos autem error harum necessitatibus maxime quibusdam recusandae.</h4>
+        </div>
+        <div class="update-card"><h1>Atualização do andamento do projeto</h1>
+            <h3>10/11/2024 - Local</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nulla earum velit eius aliquid quam odit numquam laborum commodi saepe porro vero quos autem error harum necessitatibus maxime quibusdam recusandae.</h4>
+        </div>
+        <div class="update-card"><h1>Atualização do andamento do projeto</h1>
+            <h3>28/10/2024 - Local</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nulla earum velit eius aliquid quam odit numquam laborum commodi saepe porro vero quos autem error harum necessitatibus maxime quibusdam recusandae.</h4>
+        </div>
+    </div>
+
+    <script>
+        const updatesOption = document.getElementById('updatesOption');
+        const finalReportOption = document.getElementById('finalReportOption');
+        const workPlanOption = document.getElementById('workPlanOption');
+        const updatesContainer = document.getElementById('updatesContainer');
+        updatesOption.addEventListener('click', () => {
+            setActiveOption(updatesOption);
+            updatesContainer.innerHTML = `
+                <div class="update-card">Atualização do andamento do projeto</div>
+                <div class="update-card">Atualização do andamento do projeto</div>
+                <div class="update-card">Atualização do andamento do projeto</div>
+            `;
+        });
+
+        finalReportOption.addEventListener('click', () => {
+            setActiveOption(finalReportOption);
+            updatesContainer.innerHTML = `
+                <div class="update-card">Relatório Final: Conclusão do projeto detalhada.</div>
+            `;
+        });
+
+        workPlanOption.addEventListener('click', () => {
+            setActiveOption(workPlanOption);
+            updatesContainer.innerHTML = `
+                <div class="update-card">Plano de Trabalho: Clique <a href="plano.pdf" target="_blank">aqui</a> para visualizar o PDF.</div>
+            `;
+        });
+
+        function setActiveOption(option) {
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+        }
+    </script>
+</body>
+</html>

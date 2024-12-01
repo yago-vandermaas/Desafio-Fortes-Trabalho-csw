@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de Arquivo</title>
+    <style>
+        /* Estilo Básico */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: url('imagens/fundo.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #11468C;
+        }
+
+        .logo {
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            width: 160px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 150px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .upload-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 110px;
+        }
+
+        .file-input {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: 2px dashed #007BFF;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .instructions {
+            text-align: center;
+            font-size: 18px;
+            margin: 110px auto;
+            max-width: 600px;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #11468C;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="imagens/logofortes.png" alt="Logo" class="logo">
+    <h1 class="title">Envie seu arquivo aqui:</h1>
+    <div class="upload-container">
+        <input type="file" class="file-input" id="fileInput">
+    </div>
+    <p class="instructions">
+        Nossa equipe irá analisar o material enviado e, caso necessário, entraremos em contato para maiores esclarecimentos. 
+        Sua colaboração é essencial! Estamos à disposição para qualquer dúvida durante o envio.
+    </p>
+    <a href="HomePage.html"><button class="back-button">Voltar</button></a>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                alert(`Arquivo "${file.name}" selecionado com sucesso!`);
+            }
+        });
+    </script>
+</body>
+</html>

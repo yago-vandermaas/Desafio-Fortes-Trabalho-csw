@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastrar donatário</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('imagens/fundo.png') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px; 
+    width: 150px; 
+}
+
+.form-title {
+    margin-top: 200px; 
+    font-size: 50px;
+    font-weight: bold;
+    color: #11468C;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px; 
+    outline: none;
+}
+
+.file-label {
+    font-size: 14px;
+    color: #11468C;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.file-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 20px; 
+    background-color: #f9f9f9;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; 
+    background-color: #11468C;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: uppercase; 
+}
+
+.submit-button:hover {
+    background-color: #0056b3; 
+}
+
+    </style>
+</head>
+<body>
+    <img src="imagens/logofortes.png" alt="Logo" class="logo">
+    <h1 class="form-title">Cadastrar Donatário</h1>
+    <div class="form-container">
+        <input type="text" placeholder="Nome do responsável geral" class="input-box">
+        <input type="text" placeholder="Nome da instituição" class="input-box">
+        <input type="text" placeholder="Setor" class="input-box">
+        <input type="email" placeholder="E-mail" class="input-box">
+        <input type="password" placeholder="Senha" class="input-box">
+        <label for="file-upload" class="file-label">Envie aqui a apresentação da instituição</label>
+        <input type="file" id="file-upload" class="file-input" accept=".pdf">
+        <button onclick="window.location.href='confirmacaocadastro.html'"class="submit-button">Cadastrar</button>
+    </div>
+</body>
+</html>
